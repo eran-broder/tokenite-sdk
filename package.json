@@ -1,6 +1,6 @@
 {
   "name": "@tokenite/sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SDK for integrating \"Login with Tokenite\" into your app. Your users bring their own AI tokens — you pay nothing.",
   "type": "module",
   "exports": {
@@ -39,10 +39,6 @@
   "engines": {
     "node": ">=18"
   },
-  "devDependencies": {
-    "tsx": "^4.0.0",
-    "typescript": "^5.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eran-broder/tokenite-sdk.git"
@@ -50,5 +46,9 @@
   "homepage": "https://github.com/eran-broder/tokenite-sdk#readme",
   "bugs": {
     "url": "https://github.com/eran-broder/tokenite-sdk/issues"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
   }
 }
