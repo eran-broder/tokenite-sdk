@@ -1,0 +1,54 @@
+{
+  "name": "@tokenite/sdk",
+  "version": "1.0.0",
+  "description": "SDK for integrating \"Login with Tokenite\" into your app. Your users bring their own AI tokens — you pay nothing.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./admin": {
+      "types": "./dist/admin/index.d.ts",
+      "import": "./dist/admin/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && npm run generate-readme",
+    "typecheck": "tsc --noEmit",
+    "generate-readme": "npx tsx scripts/generate-readme.ts",
+    "prepack": "tsc && npm run generate-readme && node -e \"import('node:fs/promises').then(async fs => { const files = await fs.readdir('dist', { recursive: true }); for (const f of files) if (f.endsWith('.map') || f.endsWith('.tsbuildinfo')) await fs.rm('dist/' + f); })\""
+  },
+  "keywords": [
+    "tokenite",
+    "llm",
+    "ai",
+    "proxy",
+    "oauth",
+    "byok",
+    "anthropic",
+    "openai",
+    "google"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eran-broder/tokenite-sdk.git"
+  },
+  "homepage": "https://github.com/eran-broder/tokenite-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/eran-broder/tokenite-sdk/issues"
+  }
+}
